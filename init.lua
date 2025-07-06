@@ -6,17 +6,6 @@
 --Bring in lazy package manager and other dependencies.
 require("config.lazy")
 
---Make local variables
-local builtin = require("telescope.builtin")
-local config = require("nvim-treesitter.configs")
-
---Configure treesitter
-config.setup({
-  ensure_installed = {"lua", "javascript", "python", "zig"},
-  highlight = {enable = true },
-  indent = {enable = true },
-})
-
 --Setting tab spacing to use 2 spaces.
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
@@ -27,11 +16,8 @@ vim.cmd("set shiftwidth=2")
 vim.cmd("set number")
 vim.cmd("set relativenumber")
 
---Set default desired colorscheme.
-vim.cmd.colorscheme "catppuccin"
+--Set visual stuff.
 
 --Keybindings
 vim.g.mapleader = " "
-vim.keymap.set('n', '<C-p>', builtin.find_files, {}) --Map telescope to ctrl-p
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {}) --Map livegrep to leader-fg
 
