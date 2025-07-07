@@ -15,7 +15,7 @@ return {
     },
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = {"lua_ls", "zls"}
+        ensure_installed = {"lua_ls", "zls", "pylsp", "pico8_ls"}
       })
     end
   },
@@ -25,6 +25,8 @@ return {
       local lspconfig = require("lspconfig")
       lspconfig.lua_ls.setup({})
       lspconfig.zls.setup({})
+      lspconfig.pylsp.setup({})
+      lspconfig.pico8_ls.setup({})
 
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
       vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
