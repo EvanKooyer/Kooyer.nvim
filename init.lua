@@ -20,4 +20,3 @@ vim.cmd("set relativenumber")
 
 --Keybindings
 vim.g.mapleader = " "
-
