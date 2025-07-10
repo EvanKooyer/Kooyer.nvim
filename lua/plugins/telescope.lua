@@ -3,8 +3,8 @@ return {
   dependencies = { 'nvim-lua/plenary.nvim' },
   config = function()
     local builtin = require("telescope.builtin")
-    vim.keymap.set('n', '<C-p>', builtin.find_files, {}) --Map telescope to ctrl-p
-    vim.keymap.set('n', '<leader>fg', builtin.live_grep, {}) --Map livegrep to leader-fg
+    vim.keymap.set('n', '<C-p>', builtin.find_files, {desc='Find Files'}) --Map telescope to ctrl-p
+    vim.keymap.set('n', '<leader>fg', builtin.live_grep, {desc='Live Grep'}) --Map livegrep to leader-fg
   end
 }
 
