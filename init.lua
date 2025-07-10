@@ -3,6 +3,10 @@
 --a clean neovim config with the least amount of fluff for 
 --what i use it for.
 
+--Set Leader keys
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 --Bring in lazy package manager and other dependencies.
 require("config.lazy")
 
@@ -17,6 +21,7 @@ vim.cmd("set number")
 vim.cmd("set relativenumber")
 
 --Set visual stuff.
+vim.g.have_nerd_font = true
 
---Keybindings
-vim.g.mapleader = " "
+--General Keymaps
+require("keymaps")
