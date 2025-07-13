@@ -5,6 +5,7 @@ a lot of mess everywhere, but I want to fumble my way through it and learn this
 tool.
 
 ## Dependencies
+
 - C compiler (I end up just using zig)
 - NPM
 
