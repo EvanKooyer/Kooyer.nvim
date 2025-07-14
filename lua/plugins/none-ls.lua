@@ -29,16 +29,16 @@ return {
       "nvimtools/none-ls.nvim",
     },
     config = function()
-      ensure_installed = { 
-        "stylua", 
-        "prettier", 
-        "black", 
-        "refactoring", 
-        "texlint", 
-        "Markdownlint", 
-        "proselint", 
-        "pylint", 
-        "eslint_d", 
+      ensure_installed = {
+        "stylua",
+        "prettier",
+        "black",
+        "refactoring",
+        "texlint",
+        "Markdownlint",
+        "proselint",
+        "pylint",
+        "eslint_d",
       }
     end,
   }
