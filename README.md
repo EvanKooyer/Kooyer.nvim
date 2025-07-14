@@ -17,7 +17,7 @@ and figure out my mess of a config, fork this repo and clone it to your config.
 ### Linux/Mac
 
 ```
-git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+git clone https://github.com/EvanKooyer/Kooyer.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 ```
 
 ### Windows
@@ -25,11 +25,11 @@ git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HO
 for cmd.exe:
 
 ```
-git clone https://github.com/nvim-lua/kickstart.nvim.git "%localappdata%\nvim"
+git clone https://github.com/EvanKooyer/Kooyer.nvim.git "%localappdata%\nvim"
 ```
 
 for powershell.exe:
 
 ```
-git clone https://github.com/nvim-lua/kickstart.nvim.git "%localappdata%\nvim"
+git clone https://github.com/EvanKooyer/Kooyer.nvim.git "%localappdata%\nvim"
 ```
