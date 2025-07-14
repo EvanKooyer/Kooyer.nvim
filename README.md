@@ -31,5 +31,5 @@ git clone https://github.com/EvanKooyer/Kooyer.nvim.git "%localappdata%\nvim"
 for powershell.exe:
 
 ```
-git clone https://github.com/EvanKooyer/Kooyer.nvim.git "%localappdata%\nvim"
+git clone https://github.com/EvanKooyer/Kooyer.nvim.git "${env:LOCALAPPDATA}\nvim"
 ```
