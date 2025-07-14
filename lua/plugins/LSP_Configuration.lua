@@ -15,7 +15,7 @@ return {
     },
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "zls", "pyright", "pico8_ls" },
+        ensure_installed = { "lua_ls", "zls", "pyright", "pico8_ls"},
       })
     end,
   },

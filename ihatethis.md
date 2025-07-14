@@ -8,3 +8,4 @@ have the time I can research ways to make this feel way better.
 - I would love to add autocomplete after I get used to my overhaul of my config
 - Add descriptions to all of the keymaps scattered all over the place so
   which-key might be able to pick up on my custom keybindings.
+
