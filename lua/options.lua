@@ -18,6 +18,7 @@ vim.o.splitbelow = true
 
 --Minimal number of lines to keep on screen when scrolling with cursor
 vim.o.scrolloff = 10
+vim.cmd.colorscheme "retrobox"
 
 --Set visual stuff.
 vim.g.have_nerd_font = true
