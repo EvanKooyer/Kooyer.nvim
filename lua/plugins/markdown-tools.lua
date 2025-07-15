@@ -5,5 +5,7 @@ return {
     ---@module 'render-markdown'
     ---@type render.md.UserConfig
     opts = {},
+    lazy = true,
+    event = 'BufEnter *.md'
   },
 }
