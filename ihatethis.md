@@ -7,5 +7,4 @@ have the time I can research ways to make this feel way better.
 
 - [ ] configure render markdown to load all the rendering features i want
 - [x] Set render-markdown to lazy-load
-- [ ] Lazy-load lsps only when the lsp would be used {not sure if this is
-      working right.}
+- [ ] Install refactoring.nvim for some refactoring code actions
