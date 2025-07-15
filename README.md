@@ -6,8 +6,11 @@ tool.
 
 ## Dependencies
 
-- C compiler (I end up just using zig)
+- C compiler (I am using zig as the c compiler)
 - NPM
+- Rust/Cargo
+- Grep/Ripgrep
+- nerd font
 
 ## Installation
 
