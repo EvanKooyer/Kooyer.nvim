@@ -10,18 +10,8 @@ vim.g.maplocalleader = " "
 --Bring in lazy package manager and other dependencies.
 require("config.lazy")
 
---Setting tab spacing to use 2 spaces.
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=2")
-vim.cmd("set softtabstop=2")
-vim.cmd("set shiftwidth=2")
-
---Set relative line numbers, I prefer this.
-vim.cmd("set number")
-vim.cmd("set relativenumber")
-
---Set visual stuff.
-vim.g.have_nerd_font = true
+--load options
+require('options')
 
 --General Keymaps
 require("keymaps")
