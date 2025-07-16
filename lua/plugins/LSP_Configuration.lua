@@ -1,6 +1,7 @@
 return {
   {
     "mason-org/mason.nvim",
+    event = { "BufReadPre", "BufNewFile" },
     opts = {},
     config = function()
       require("mason").setup()
@@ -8,6 +9,7 @@ return {
   },
   {
     "mason-org/mason-lspconfig.nvim",
+    event = { "BufReadPre", "BufNewFile" },
     opts = {},
     dependencies = {
       { "mason-org/mason.nvim", opts = {} },
@@ -21,6 +23,7 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
+    event = { "BufReadPre", "BufNewFile" },
     config = function()
       local lspconfig = require("lspconfig")
       lspconfig.lua_ls.setup({})
