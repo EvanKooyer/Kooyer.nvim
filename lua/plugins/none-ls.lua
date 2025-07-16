@@ -10,14 +10,12 @@ return {
       null_ls.setup({
         sources = {
           null_ls.builtins.formatting.stylua,
-          null_ls.builtins.formatting.prettier,
           null_ls.builtins.formatting.black,
           null_ls.builtins.code_actions.refactoring,
           null_ls.builtins.code_actions.textlint,
           null_ls.builtins.diagnostics.markdownlint,
           null_ls.builtins.diagnostics.proselint,
           null_ls.builtins.diagnostics.pylint,
-          require("none-ls.diagnostics.eslint_d"),
         },
       })
     end,
@@ -35,14 +33,12 @@ return {
         -- This setting has no relation with the `automatic_installation` setting.
         ensure_installed = {
           "stylua",
-          "prettier",
           "black",
           "refactoring",
-          "texlint",
+          "textlint",
           "Markdownlint",
           "proselint",
           "pylint",
-          "eslint_d",
         },
         -- Enable or disable null-ls methods to get set up
         -- This setting is useful if some functionality is handled by other plugins such as `conform` and `nvim-lint`
@@ -57,7 +53,7 @@ return {
         -- Will automatically install masons tools based on selected sources in `null-ls`.
         -- Can also be an exclusion list.
         -- Example: `automatic_installation = { exclude = { "rust_analyzer", "solargraph" } }`
-        automatic_installation = false,
+        automatic_installation = true,
         -- See [#handlers-usage](#handlers-usage) section
         handlers = {},
       }

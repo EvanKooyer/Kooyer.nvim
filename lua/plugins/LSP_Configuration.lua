@@ -1,7 +1,6 @@
 return {
   {
     "mason-org/mason.nvim",
-    event = { "BufReadPre", "BufNewFile" },
     opts = {},
     config = function()
       require("mason").setup()
@@ -23,22 +22,34 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
-    event = { "BufReadPre", "BufNewFile" },
+    ft = { "lua", "python", "zig", "pico8" },
     config = function()
       local lspconfig = require("lspconfig")
-      lspconfig.lua_ls.setup({})
-      lspconfig.zls.setup({})
-      lspconfig.pyright.setup({})
-      lspconfig.pico8_ls.setup({})
+      local on_attach = function(_, bufnr)
+        local map = function(mode, lhs, rhs, desc)
+          vim.keymap.set(mode, lhs, rhs, { buffer = bufnr, desc = desc })
+        end
+        map("n", "K", vim.lsp.buf.hover, "LSP Hover")
+        map("n", "<leader>gD", vim.lsp.buf.declaration, "Go to declaration")
+        map("n", "<leader>gd", vim.lsp.buf.definition, "Go to definition")
+        map("n", "<leader>gi", vim.lsp.buf.implementation, "List implementations")
+        map("n", "<leader>gr", vim.lsp.buf.references, "List References")
+        map("n", "<leader>rn", vim.lsp.buf.rename, "Rename all references")
+        map("n", "<leader>gf", function() vim.lsp.buf.format { async = true } end, "Format by LSP")
+        map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, "Code Actions")
+      end
 
-      vim.keymap.set("n", "K", vim.lsp.buf.hover, {desc='LSP Hover'})
-      vim.keymap.set("n", "<leader>gD", vim.lsp.buf.declaration, {desc='Go to declaration'})
-      vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {desc='Go to definition'})
-      vim.keymap.set("n", "<leader>gi", vim.lsp.buf.implementation, {desc='List implementations'})
-      vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {desc='List References'})
-      vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {desc='Rename all references'})
-      vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {desc='Format by lint/LSP'})
-      vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {desc='Code Actions'})
+      lspconfig.lua_ls.setup({
+        on_attach = on_attach,
+        settings = {
+          Lua = {
+            diagnostics = { globals = { "vim" } },
+          },
+        },
+      })
+      lspconfig.zls.setup({ on_attach = on_attach })
+      lspconfig.pyright.setup({ on_attach = on_attach })
+      lspconfig.pico8_ls.setup({ on_attach = on_attach })
     end,
   },
 }
