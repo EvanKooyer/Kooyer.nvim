@@ -13,6 +13,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- Exit terminal mode
+vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
 --
