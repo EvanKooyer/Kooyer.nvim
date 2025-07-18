@@ -22,3 +22,6 @@ vim.cmd.colorscheme "retrobox"
 
 --Set visual stuff.
 vim.g.have_nerd_font = true
+
+--Add custom filetypes for detection
+vim.filetype.add({ extension = { p8 = 'p8' } })

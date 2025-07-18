@@ -22,7 +22,7 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
-    ft = { "lua", "python", "zig", "pico8", "markdown" },
+    ft = { "lua", "python", "zig", "p8", "markdown" },
     config = function()
       local lspconfig = require("lspconfig")
 
@@ -38,7 +38,7 @@ return {
 
       lspconfig.pyright.setup({})
 
-      lspconfig.pico8_ls.setup({})
+      lspconfig.pico8_ls.setup({ filetypes = 'pico8' })
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "LSP Hover" })
       vim.keymap.set("n", "<leader>gi", vim.lsp.buf.implementation, { desc = "List implementations" })
