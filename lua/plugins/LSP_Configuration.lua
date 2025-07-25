@@ -16,7 +16,7 @@ return {
     },
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "zls", "pyright", "pico8_ls" },
+        ensure_installed = { "lua_ls", "zls", "pyright", "pico8_ls", "markdown_oxide" },
       })
     end,
   },
@@ -37,6 +37,8 @@ return {
       lspconfig.zls.setup({})
 
       lspconfig.pyright.setup({})
+
+      lspconfig.markdown_oxide.setup({})
 
       lspconfig.pico8_ls.setup({ filetypes = 'pico8' })
 
